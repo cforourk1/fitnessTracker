@@ -12,6 +12,9 @@ export default function ActivitiesPage() {
     setActivities(data);
   };
 
+
+
+
   useEffect(() => {
     syncActivities();
   }, []);
@@ -19,7 +22,7 @@ export default function ActivitiesPage() {
   return (
     <>
       <h1>Activities</h1>
-      <ActivityList activities={activities} />
+      <ActivityList activities={activities} syncActivities={syncActivities}/>
       <ActivityForm syncActivities={syncActivities} />
     </>
   );
