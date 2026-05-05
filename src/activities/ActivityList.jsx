@@ -19,6 +19,7 @@ export default function ActivityList({ activities, syncActivities }) {
   return (
   <div>
     <ul>
+{/* added the onclick to call the delete activity function - tenerary condition applied */}
       {activities.map((activity) => (
         <li key={activity.id}>{activity.name}
       {token ? ( <button onClick={() => trydeleteActivity(token, activity.id)}>Delete Activity</button>) :null }
